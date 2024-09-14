@@ -1,0 +1,19 @@
+
+h1{
+    color: red;
+}
+
+.important-places{
+    color: blue;
+}
+
+.fruits-container li{
+    color: green;
+}
+
+.text-center{
+   text-align: center;
+}
+.large-text{
+    font-size: 2em;
+}

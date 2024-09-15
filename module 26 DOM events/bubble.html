@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubble</title>
+    <style>
+        #item-2{
+            border: 2px solid blue;
+        }
+        ul{
+            border: 2px solid black;
+        }
+        section{
+            border: 2px solid red;
+        }
+        body{
+            border: 2px solid green;
+        }
+    </style>
+</head>
+<body id="body">
+    <h1>Exploring Event Bubble</h1>
+    <section id="list-container">
+        <ul id="list-ul">
+            <li id="item-1">Lorem, ipsum.</li>
+            <li id="item-2">Ratione, ut?</li>
+            <li id="item-3">Culpa, quasi!</li>
+            <li id="item-4">Ducimus, recusandae?</li>
+            <li id="item-5">Praesentium, nemo?</li>
+            <li id="item-6">Officiis, accusamus?</li>
+        </ul>
+    </section>
+
+    <script>
+        document.getElementById('item-2').addEventListener('click', function(event){
+            console.log('Item 2 clicked');
+            event.stopPropagation(); // stop the event bubbling
+            event.stopImmediatePropagation(); // stop the event bubbling and other event listeners
+        })
+
+        document.getElementById('list-ul').addEventListener('click', function(event){
+            console.log('List ul clicked');
+            event.stopPropagation(); // stop the event bubbling
+            event.stopImmediatePropagation(); // stop the event bubbling and other event listeners
+        })
+        document.getElementById('list-container').addEventListener('click', function(event){
+            console.log('Section Container clicked');
+            event.stopPropagation(); // stop the event bubbling
+            event.stopImmediatePropagation(); // stop the event bubbling and other event listeners
+        })
+        document.getElementById('body').addEventListener('click', function(event){
+            console.log('body clicked');
+            event.stopPropagation(); // stop the event bubbling
+            event.stopImmediatePropagation(); // stop the event bubbling and other event listeners
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Events </title>
+</head>
+
+<body>
+    <h1>DOM special event</h1>
+    <button onclick="console.log(10)">Click Me</button>
+    <button onclick="console.log(100);">Another Button</button>
+    <button onclick="document.body.style.backgroundColor='yellow'">Make yellow</button>
+    <button onclick="makeRed ()">Make Red</button>
+
+    <button id="makeBlue">Make Blue</button>
+
+
+    <h1>DOM special eventlistener</h1>
+
+    <button id="make-pink">Make Pink </button>
+
+    <button id="make-green">Make green</button>
+
+    <button id="make-orange">Make orange</button>
+
+
+
+
+
+
+
+
+
+
+    <script src="js/event.js"></script>
+    <script>
+        function makeRed() {
+            document.body.style.backgroundColor = 'red';
+        }
+
+    </script>
+    <script src="js/eventListener.js"></script>
+
+
+</body>
+
+</html>

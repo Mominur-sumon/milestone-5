@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summary : event handlers</title>
+</head>
+<body>
+    <h1>Explore DOM Events</h1>
+    <button onclick="makeGreen()">Make green</button>
+    <button id="make-pink">Make pink</button>
+    <input type="email" name="" id="email">
+    <p on></p>
+
+    <script>
+        function makeGreen(){
+            document.body.style.backgroundColor = 'green';
+        }
+
+        document.getElementById('make-pink').addEventListener('click', function(event){
+            document.body.style.backgroundColor = 'pink';
+            console.log(event); 
+        })
+
+        document.getElementById('email').addEventListener("keyup", function(event){
+            console.log(event.target.value);
+        })
+    </script>
+</body>
+</html>
